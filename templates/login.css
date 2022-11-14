@@ -1,0 +1,18 @@
+body{
+    background-color: lightgrey;
+}
+.W{
+    margin-left: 38%;
+    font-size: 100px;  
+}
+.O{
+    font-size: 100px;
+    padding-top: 100px;
+}
+.D{
+    font-size: 100px;
+}
+.btn{
+    background-color: rgb(58, 180, 220);
+}
+

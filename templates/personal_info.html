@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="personal_info.css">
+    <title>Personal info</title>
+</head>
+<body>
+    <input class="date" name="DOB" type="date">
+
+    <div class="mb-4 pb-2">
+        <select class="select-3">
+            <option value="1">gender</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+        </select>
+    </div>
+
+    <label>
+        <select class="hieght">
+            <option  selected>Hieght</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+            <option>Option 4</option>
+        </select>
+    </label>
+
+<input class="weight" id="inputPounds" type="number" placeholder="Weight"
+oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+
+
+    <button type="submit" class="btn btn-primary">Back</button>
+    <button type="submit" class="btn btn-primary">Next</button>
+
+</body>
+</html>
