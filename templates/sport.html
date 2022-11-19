@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}login{% endblock title %}
+
 
 {% block content %}
 <!DOCTYPE html>
@@ -9,24 +9,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="sport.css" />
-    <title>Document</title>
+    {% load static %}<link rel="stylesheet" href="{% static 'css/sport.css' %}">
+    {% block title %}{% endblock title %}
 </head>
 <body>
+    
     <h1>Sport</h1>
 
     <div class="flex-div">
-        <h3 class="pl">Powerlifting</h3>
-
-        <h3 class="rn">Running</h3>
+        <div class="container">
+        <h3>Powerlifting</h3>
+        <h3>Running</h3>
+        </div>
 
     <div class="container">
         <button type="submit" name="learn" value="myimage">
-            <img src=img/powerlifting.png alt="sport">
+            <img src="{% static 'img/powerlifting.png' %}">
         </button>
 
         <button type="submit" name="learn" value="myimage">
-            <img src=img/running.png alt="sport">
+            <img src="{% static 'img/running.png' %}">
         </button>
     </div>
     </div>

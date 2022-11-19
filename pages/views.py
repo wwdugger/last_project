@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView
 
-class HomePageView(TemplateView):
+class LoginPageView(TemplateView):
     template_name = "login.html"
 
 class RegisterPageView(TemplateView):
@@ -19,3 +19,9 @@ class SportPageView(TemplateView):
 
 class PowerPageView(TemplateView):
     template_name = "power.html"
+
+class RunPageView(TemplateView):
+    template_name = "run.html"
+
+class ProfilePageView(TemplateView):
+    template_name = "profile.html"

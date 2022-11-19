@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Register{% endblock title %}
+
 {% block content %}
 
 <!DOCTYPE html>
@@ -10,11 +10,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS only -->
-    <link rel="stylesheet" href="register.css">
+    {% load static %}<link rel="stylesheet" href="{% static 'css/register.css' %}">
 
-    <title>Register</title>
+    {% block title %}Register{% endblock title %}
 </head>
 <body>
+    
     <form>
         <div class="mb-3">
             <p>Full Name</p>

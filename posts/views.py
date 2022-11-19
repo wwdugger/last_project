@@ -1,19 +1,20 @@
 from re import template
-from django.views.generic import PostListView, DetailView
+from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView
+from .models import Post
 
 
 class PostListView(ListView):
     template_name = "posts/list.html"
-    model = "Post"
+    model = Post
 
 
 class PostDetailView(DetailView):
     template_name = "posts/detail.html"
-    model = "Post"
+    model = Post
 
 
 class PostCreateView(CreateView):
     template_name = "posts/new.html"
-    model = "Post"
+    model = Post
     fields = ["title", "subtitle", "body"]
