@@ -25,3 +25,6 @@ class RunPageView(TemplateView):
 
 class ProfilePageView(TemplateView):
     template_name = "profile.html"
+
+class NavBarPageView(TemplateView):
+    template_name = "nav-bar.html"

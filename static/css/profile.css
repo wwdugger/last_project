@@ -1,3 +1,169 @@
+
 body{
-    background-color: rgb(181, 181, 181);
+    background-color: white;
+}
+/* nav-bar */
+header{
+    background-color: rgb(216, 214, 214);
+    border-bottom: 1px solid white;
+    position: fixed;
+    left: 0;
+    width: 100%;
+}
+.navigation{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.navigation a{
+    color: aliceblue;
+    
+}
+.WODlogo{
+    
+    width: 30;
+    
+}
+.WODlogo a{
+    
+    font-size: 25px;
+    padding-left: 10px;
+    
+}
+.v1{
+    border-left: 2px solid black;
+    height: 30px;
+    margin-left: 20px;
+}
+.contacts_icons{
+    
+    column-gap: 30px;
+    
+}
+.stats{
+    margin-right: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 5px;
+    box-shadow: 5px 5px gray;
+    color: aliceblue;
+    background-color: orange;
+    border-color: orange;
+}
+.program{
+    margin-right: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
+    box-shadow: 5px 5px gray;
+    color: aliceblue;
+    background-color: red;
+    border-color: red;
+}
+
+.search_bar{
+    border-radius: 3px;
+    color: aliceblue;
+    cursor: text;
+    
+    
+}
+.search_bar a{
+    font-size: 25px;
+    padding-left: 15px;
+    
+}
+
+input{
+    width: 200px;
+    height: 25px;
+    margin-top: 27px;
+    box-shadow: 5px 5px gray;
+    border-radius: 5px;
+}
+/* body */
+h2,p{
+    color:black;
+    font-weight: bold;
+    padding: 0px 15px;
+}
+img{
+    margin-left: 200px;
+    margin:20px;
+    margin-top: 150px;
+    height: 200px;
+    width: 200px;
+    border-radius: 30%;
+}
+.main{
+    height: 700px;
+    width: 400px;
+    display: grid;
+    grid-template-rows: 100px;
+    grid-template-columns: 25px 25px 25px;
+    column-gap: 300px;
+    position: relative;
+}
+.detail{
+    display: grid;
+    grid-template-rows:150px;
+    grid-template-columns:1fr 1fr 1fr ;
+    margin: 20px;
+    margin-top: 150px;
+    justify-content:flex-start;
+    column-gap: 50px;
+}
+h3{
+    color: black;
+    font-weight: bold;
+    
+}
+.info{
+    margin-right: 50px;
+    margin-top: 250px;
+    width: 400px
+    
+}
+.name {
+    margin-left: 50px;
+}
+.service{
+    margin-left: 50px;
+}
+.work{
+    margin-left: 50px;
+}
+.edit button{
+    width:100%;
+    margin: 0px auto;
+    margin-right: 50px;
+    height: 30px;
+    font-weight: bold;
+    background-color: green;
+    border-color: green;
+    color: aliceblue;
+
+}
+
+.links button:hover,.edit button:hover{
+    background-color:rgb(209, 205, 205);
+}
+.button button{
+    border: 2px solid green;
+    border-radius: 3px;
+    border-radius: 5px;
+    box-shadow: 5px 5px gray;
+}
+.links button{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(209, 205, 205);
+    color: black;
+    font-weight: bold;
+    margin: 0px 8px;
 }

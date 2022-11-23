@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import LoginPageView, RegisterPageView, PersonalInfoPageView, LocationPageView,SportPageView, PowerPageView, ProfilePageView, RunPageView
+from .views import LoginPageView, RegisterPageView, PersonalInfoPageView, LocationPageView,SportPageView, PowerPageView, ProfilePageView, RunPageView, NavBarPageView
 
 urlpatterns = [
     path('login/', LoginPageView.as_view(), name= 'login'),
@@ -10,5 +10,6 @@ urlpatterns = [
     path('power/', PowerPageView.as_view(), name='power'),
     path('run/', RunPageView.as_view(), name='run'),
     path('profile/', ProfilePageView.as_view(), name='pofile'),
+    path('nav-bar/', NavBarPageView.as_view(), name='navbar'),
 
 ]
