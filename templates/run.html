@@ -1,44 +1,55 @@
-{% extends 'base.html' %}
 
 
 
-{% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load static %}<link rel="stylesheet" href="{% static 'css/power.css' %}">
-    {% block title %}Run{% endblock title %}
-</head>
-<body>
+
+
+    {% load static %}
+
+    {% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}<link rel="stylesheet" href="{% static 'css/run.css' %}">
+        
+    </head>
+    <body>
+        <div class="run">
+        <h1>Running Programs</h1>
+        </div>
+
+        <div class="main-div">
+            <div class="container">
+            <h3 style="color:blue;">Beginner</h3>
+            <h3 style="color:yellow ;">Intermediate</h3>
+            <h3 style="color: red;">Advance</h3>
+        </div>
+
+        <div class="container">
+            
+            <button class="K" style="background-color:blue ;" type="submit" name="5K" value="myimage">
+                <h1>5K</h1>
+            </button>
     
-    <h1>Running Programs</h1>
+            <button  class="K" style="background-color: yellow;" type="submit" name="learn" value="myimage">
+                <h1>10K</h1>
+            </button>
+    
+            <button class="K" style="background-color: red" type="submit" name="learn" value="myimage">
+                <h1>20K +</h1>
+            </button>
+        </div>
+    
+        </div>
+        <button type="button" class="btn btn-primary" onclick= "location.href='../sport/';">Back</button>
+        <button type="button" class="btn btn-primary" onclick= "location.href='../Home/';">Next</button>
+    
+    </body>
+    </html>
+    {% endblock content %}
+    
 
-    <div>
-        <h3>Beginner</h3>
-        <h3>Intermediate</h3>
-        <h3>Advance</h3>
-    <div class="container">
-        <button type="submit" name="learn" value="myimage">
-            <img src=img/25lbs.jpg alt="sport">
-        </button>
 
-        <button type="submit" name="learn" value="myimage">
-            <img src=img/35lbs.jpg alt="sport">
-        </button>
-
-        <button type="submit" name="learn" value="myimage">
-            <img src=img/45lbs.jpeg alt="sport">
-        </button>
-    </div>
-
-    </div>
-        <button type="submit" class="btn btn-primary">Back</button>
-        <button type="submit" class="btn btn-primary">Next</button>
-
-</body>
-</html>
-{% endblock content %}
 

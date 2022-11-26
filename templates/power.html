@@ -1,4 +1,4 @@
-{% load static %}
+
 
 {% block content %}
 <!DOCTYPE html>
@@ -8,11 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}<link rel="stylesheet" href="{% static 'css/power.css' %}">
-    {% block title %}Power{% endblock title %}
+    
 </head>
 <body>
-    
+    <div class="power">
     <h1>Powerlifting Programs</h1>
+    </div>
 
     <div class="main-div">
         <div class="container">
@@ -36,8 +37,8 @@
     </div>
 
     </div>
-        <button type="submit" class="btn btn-primary">Back</button>
-        <button type="submit" class="btn btn-primary">Next</button>
+    <button type="button" class="btn btn-primary" onclick= "location.href='../sport/';">Back</button>
+    <button type="button" class="btn btn-primary" onclick= "location.href='../Home/';">Next</button>
 
 </body>
 </html>

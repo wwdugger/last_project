@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+
 
 
 {% block content %}
@@ -12,7 +12,7 @@
     <!-- CSS only -->
     {% load static %}<link rel="stylesheet" href="{% static 'css/register.css' %}">
 
-    {% block title %}Register{% endblock title %}
+    
 </head>
 <body>
     
@@ -39,8 +39,8 @@
             <input type="password" class="form-control-5" id="exampleInputPassword2">          
         </div>
         </div>
-        <button type="submit" class="btn btn-primary">Back</button>
-        <button type="submit" class="btn btn-primary">Next</button>
+        <button type="button" class="btn btn-primary" onclick= "location.href='../login/';">Back</button>
+        <button type="button" class="btn btn-primary" onclick="location.href='../location/';">Next</button>
 </form>
 </body>
 <!-- JavaScript Bundle with Popper -->

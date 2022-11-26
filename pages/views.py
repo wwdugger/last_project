@@ -28,3 +28,4 @@ class ProfilePageView(TemplateView):
 
 class NavBarPageView(TemplateView):
     template_name = "nav-bar.html"
+

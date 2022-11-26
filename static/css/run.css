@@ -1,9 +1,15 @@
 body {
-    background-color: rgb(196, 192, 192);
+    background-color: rgb(221, 219, 219);
 }
-div.power{
+div.run{
     margin-left: 325px;
-    color: orangered;
+    color: rgb(1, 178, 1);
+
+}
+.K{
+    width: 150px;
+    height: 150px;
+
 }
 .main-div{
     margin-top: 30%;
@@ -28,6 +34,6 @@ img {
     border-radius: 10px;
     background-color: rgb(0, 157, 255);
     border-color: rgb(0, 157, 255);
-    box-shadow: 0 0 3px 3px gray;
+    box-shadow: 3px 3px gray;
 }
 
