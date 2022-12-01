@@ -1,0 +1,48 @@
+    {% load static %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script
+            src="https://kit.fontawesome.com/3865fe1c3d.js"
+            crossorigin="anonymous"
+            ></script>
+            <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+            <link rel="stylesheet" href="{% static 'css/profile.css' %}" />
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+                crossorigin="anonymous" />
+        <title>Document</title>
+    </head>
+    <body>
+        
+            <div class="main">
+            <header>
+                <div class="navigation">
+                <div class="WODlogo">
+                    {{ user.username }}
+                    <a href="/"><h3><i style="color: red;">W</i><i style="color: yellow;">O</i><i style="color:blue ;">D</i></h3></a>
+                </div>
+
+                <div class="search_bar">
+                    <input type="text" placeholder="search" />
+                    <a class="search_bar" href=""><i class="fas fa-search"></i></a>
+                </div>
+
+                <div class="contacts_icons">
+                    <button class="program" onclick="location.href='../power/';">Programs</button>
+                    <button class="stats">Stats</button>
+                    
+                </div>
+                </div>
+            </header>
+        
+    {% block content %}
+
+
+    {% endblock content %}
+        
+    </body>
+    </html>

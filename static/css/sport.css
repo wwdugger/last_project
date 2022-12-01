@@ -8,17 +8,17 @@ body {
 }
 .flex-div{
     margin-top: 30%;
+    
 }
 h1 {
     text-align: center;
 }
 
-
-
 img {
     height: 155px;
     width: 155px;
     box-shadow: 0 0 3px 3px gray;
+
 }
 .btn {
     display: inline-block;

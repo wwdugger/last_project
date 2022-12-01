@@ -5,6 +5,9 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+h3{
+    
+}
 .date{
     margin-bottom: 40px;
     width:500px;

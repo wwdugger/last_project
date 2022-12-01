@@ -1,4 +1,5 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView 
+
 
 class LoginPageView(TemplateView):
     template_name = "login.html"
@@ -26,6 +27,9 @@ class RunPageView(TemplateView):
 class ProfilePageView(TemplateView):
     template_name = "profile.html"
 
-class NavBarPageView(TemplateView):
-    template_name = "nav-bar.html"
+class HomePageView(TemplateView):
+    template_name = 'pages/index.html'
 
+
+class AboutPageView(TemplateView):
+    template_name = 'pages/about.html'
