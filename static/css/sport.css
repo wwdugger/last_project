@@ -1,36 +1,107 @@
-body {
-    background-color: rgb(196, 192, 192);
-}
-.container {
-    
+    body,dd,fieldset,figure,form,ol,ul{margin:0}
+    *,
+    *:after,
+    *:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+    html{-webkit-font-smoothing:subpixel-antialiased;display:block !important;font-size:62.5%;}
+    .clearfix{*zoom:1;}
+    .clearfix:before,
+    .clearfix:after{display:table;content:"";line-height:0;}
+    .clearfix:after{clear:both;}
+    body{background:#e5e5e5;color:#333333;line-height:1.6;font-size:1.4rem;padding:0;margin:0;font-family:Arial, Helvetica, sans-serif;}
+    img{max-width:100%;width:250px \9;height:250px;vertical-align:middle;border:0;-ms-interpolation-mode:bicubic;padding: 5px; background-color: white;}
+    a:hover, a:active{outline:0;}
+    a{color:#CC0000;text-decoration:none;}
+    a:hover, a:focus{color:#141414;text-decoration:none;}
+    ul{list-style:none; padding:0; margin: 0;}
+    p{margin:1.3em 0 1.5em;}
+    iframe{max-width:100% !important;}
+    strong{font-weight:bold;}
+    .popover { display: none !important}
+    em{font-style:italic;}
+
+
+
+
+    .header {height:70px;width:100%;z-index:99999999!important; margin: 0; padding: 0}
+
+
+
+
+    .wrapper{*zoom:1;margin:0 auto;max-width:1310px; padding:0!important}
+    .wrapper:before,
+    .wrapper:after{display:table;content:"";line-height:0;}
+    .wrapper:after{clear:both;}
+
+
+    .main {width:100%;*zoom:1; margin: 0; background: #FFFFFF; padding: 25px}
+    .main:before,
+    .main:after{display:table;content:"";line-height:0;}
+    .main:after{clear:both;}
+
+
+    .top {width:100%;*zoom:1; margin: 0 0 7px 0; background: #ff0000; padding: 0}
+    .top:before,
+    .top:after{display:table;content:"";line-height:0;}
+    .top:after{clear:both;}
+
+
+
+
+    .homepage {display:none }
+    .itemid-101 .homepage {display:block; padding-top: 7px}
+    .itemid-101 .main, .itemid-101 .aftermain {display:none !important}
+
+
+    .content-bottom{text-align:center;margin-bottom:30px}
+
+    .bottom {width:100%;*zoom:1; background:#FFFFFF; margin-top: 20px!important; padding: 20px 0!important}
+    .bottom:before, .bottom:after{display:table;content:"";line-height:0;}
+    .bottom:after{clear:both;}
+    .bottom [class*="span"]{display:block;width:100%;min-height:28px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;float:left;margin-left:2.127659574%;*margin-left:2.0744680846383%;}
+    .bottom [class*="span"]:first-child{margin-left:0;}
+
+
+
+    .blog-items {
     display: flex;
-    justify-content: space-around;
-}
-.flex-div{
-    margin-top: 30%;
-    
-}
-h1 {
-    text-align: center;
-}
+    flex-wrap: wrap;
+    width: 100%;
+    }
 
-img {
-    height: 155px;
-    width: 155px;
-    box-shadow: 0 0 3px 3px gray;
 
-}
-.btn {
-    display: inline-block;
-    margin-top: 200px;
-    margin-left: 150px;
-    color: aliceblue;
-    width: 200px;
-    padding: 10px;
-    margin-top: 150px;
-    border-radius: 10px;
-    background-color: rgb(0, 157, 255);
-    border-color: rgb(0, 157, 255);
-    box-shadow: 0 0 3px 3px gray;
-}
+    @media (min-width: 1140px) {  
+    .blog-items.columns-2 > div {   width: 50%;  }
+    .blog-items.columns-3 > div {   width: 33.33333%; }
+    .blog-items.columns-4 > div {   width: 25%;  }}
 
+    @media (max-width:1140px){  
+    .blog-items.columns-4 > div {   width: 33.33333%; }
+    .blog-items.columns-3 > div {   width: 50%;   }}
+
+    @media (max-width:768px){ 
+    .blog-items.columns-4 > div {   width: 50%;     }
+    .blog-items.columns-3 > div {   width: 50%;   }}
+
+
+
+    .blog-item { padding-right: 0.5%; padding-top: 0.5% }
+    .blog-item:last { padding-right: none; }
+
+    .btn {
+        display: inline-block;
+        margin-top: 200px;
+        margin-bottom: 100px;
+        margin-left: 150px;
+        color: aliceblue;
+        width: 200px;
+        padding: 10px;
+        margin-top: 150px;
+        border-radius: 10px;
+        background-color: rgb(0, 157, 255);
+        border-color: rgb(0, 157, 255);
+        box-shadow: 0 0 3px 3px gray;
+    }
+    h1{text-align: center;
+    color: red;
+
+    }

@@ -1,0 +1,77 @@
+{% block content %}
+    <html>
+    <script src="https://bossanova.uk/jspreadsheet/v4/jexcel.js"></script>
+    <link rel="stylesheet" href="https://bossanova.uk/jspreadsheet/v4/jexcel.css" type="text/css" />
+    
+    <script src="https://jsuites.net/v4/jsuites.js"></script>
+    {% load static %}<link rel="stylesheet" href="{% static 'css/log.css' %}">
+    <form action="submit">
+        <h1 class="log">Logs</h1>
+    <div id="spreadsheet"></div>
+    
+    <script>
+    var data = [
+        ['Bench'],
+        ['Sqaut'],
+        ['Deadlift'],
+    ];
+    
+    jspreadsheet(document.getElementById('spreadsheet'), {
+        data:data,
+        columns: [
+            {
+                type: 'text',
+                title:'Exersise',
+                width: 120
+            },
+            {
+                type: 'calendar',
+                title:'Date',
+                width:120
+            },
+            {
+                type: 'text',
+                title:'Sets',
+                width:120,
+                source:[
+                    "Alfa Romeo",
+                    "Audi",
+                    "Bmw",
+                    "Chevrolet",
+                    "Chrystler",
+                    // (...)
+                ]
+            },
+            {
+                type: 'text',
+                title:'Reps',
+                width:120
+            },
+            {
+                type: 'text',
+                title:'Lbs1',
+                width:120
+            },
+            {
+                type: 'text',
+                title:'Lbs2',
+                width:120
+            },
+            {
+                type: 'text',
+                title:'Lbs3',
+                width:120,
+            },
+            
+        ]
+    });
+    </script>
+    <input type="radio" value="beginner"name="fav_language" id="beginner">
+    <label for="beginner">pick</label>
+    <br>
+    
+    <button type="button" class="btn btn-primary" onclick= "location.href='../sport/';">Submit</button>
+
+    {% endblock content %}
+    </form>
+    </html>

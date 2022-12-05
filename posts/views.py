@@ -8,7 +8,6 @@ from django.urls import reverse_lazy
 from .models import Post, Status
 from .models import Post
 
-
 class PostListView(ListView):
     template_name = "posts/list.html"
     model = Post
@@ -86,3 +85,4 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def test_func(self):
         post_obj = self.getobject()
         return post_obj == self.request.user
+

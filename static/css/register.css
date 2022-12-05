@@ -1,9 +1,9 @@
 body{
-    background-color: rgb(194, 194, 194);
+    background-color: rgb(230, 227, 227);
 }
 h2{
     text-align: center;
-    color: aliceblue;
+    color: blue;
 }
 form{
     position: absolute;

@@ -1,6 +1,6 @@
 
 body{
-    background-color: rgb(196, 192, 192);
+    background-color: rgb(230, 227, 227);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -9,7 +9,7 @@ body{
     }
     h3{
         text-align: center;
-        color: aliceblue;
+        color: gold;
     }
     .form-control-1{
         width: 600px;
