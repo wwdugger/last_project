@@ -1,0 +1,29 @@
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}<link rel="stylesheet" href="{% static 'css/5k_run.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Running Programs</h1>
+    <div class="run">
+    <img src="{% static 'img/5k_run.jpg' %}">
+    <br>
+    <div class="radio">
+    <input type="radio" value="beginner"name="fav_language" id="beginner">
+    <label for="beginner">Pick</label>
+    </div>
+    <br>
+    
+    <button type="button" class="btn btn-primary" onclick= "location.href='../sport/';">Submit</button>
+    {% endblock content %}
+</div>
+</body>
+</html>

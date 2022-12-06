@@ -37,3 +37,9 @@ class AboutPageView(TemplateView):
 class LogsPageViews(TemplateView):
     template_name = 'log.html'
 
+class FiveKPageViews(TemplateView):
+    template_name = '5k_run.html'
+
+class ProgramsPageViews(TemplateView):
+    template_name = 'programs.html'
+

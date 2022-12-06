@@ -1,3 +1,4 @@
+from django.shortcuts import render, redirect, get_object_or_404
 from re import template
 from multiprocessing import context
 from django.views.generic import ListView, DetailView
@@ -86,3 +87,18 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         post_obj = self.getobject()
         return post_obj == self.request.user
 
+    def PostDetail(request, post_id):
+        post = get_object_or_404(Post, id=post_id)
+
+        #comment
+        comments = Comment.objects.filter(post=post).order_by
+
+        #comment_form
+
+
+
+        
+        context = {
+            'post': post
+        }
+        return render(request, 'post-dtails', context)

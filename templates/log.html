@@ -5,9 +5,39 @@
     
     <script src="https://jsuites.net/v4/jsuites.js"></script>
     {% load static %}<link rel="stylesheet" href="{% static 'css/log.css' %}">
+    <div class="main">
+        <header>
+            <div class="navigation">
+            <div class="WODlogo">
+                
+                <a href="/"><h3><i style="color: red;">W</i><i style="color: yellow;">O</i><i style="color:blue ;">D</i></h3></a>
+            </div>
+
+            <div class="search_bar">
+                <input type="text" placeholder="search" />
+                <a class="search_bar" href=""><i class="fas fa-search"></i></a>
+            </div>
+
+            <div class="contacts_icons">
+                <button class="stats" style="background-color:blue ;">Bluetooth</button>
+                <button class="stats" style="background-color:rgb(10, 243, 165) ;">Challenges</button>
+                <button class="stats" style="background-color:rgb(176, 2, 176) ;">Events</button>
+                
+            </div>
+            </div>
+        </header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     <form action="submit">
-        <h1 class="log">Logs</h1>
-    <div id="spreadsheet"></div>
+        <div  class="log">
+        <h1>Logs</h1>
+    </div>
+    <div class="spreadsheet" id="spreadsheet"></div>
     
     <script>
     var data = [
@@ -66,12 +96,12 @@
         ]
     });
     </script>
-    <input type="radio" value="beginner"name="fav_language" id="beginner">
-    <label for="beginner">pick</label>
-    <br>
     
-    <button type="button" class="btn btn-primary" onclick= "location.href='../sport/';">Submit</button>
-
+    
+    <button type="button" class="btn1" onclick= "location.href='../profile/';">Share</button>
+    {% load comments %}
+    <button type="button" class="btn2" onclick= "location.href='../profile/';">Comment</button>
+    
     {% endblock content %}
     </form>
     </html>

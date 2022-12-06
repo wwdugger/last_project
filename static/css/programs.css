@@ -1,0 +1,32 @@
+body{
+    background-color: gray;
+}
+h1{
+    text-align: center;
+    color: blueviolet;
+}
+.run{
+    text-align: center;
+    margin-top: 150px;
+}
+img{
+    height: 80%;
+    width: 80%;
+}
+.radio{
+    font-weight: bold;
+    margin-left: 80px;
+    float:left
+}
+.btn {
+    display: inline-block;
+    margin-top: 200px;
+    margin-left: 150px;
+    color: aliceblue;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(0, 157, 255);
+    border-color: rgb(0, 157, 255);
+    box-shadow: 3px 3px gray;
+}

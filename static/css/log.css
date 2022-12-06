@@ -1,7 +1,102 @@
 body{
     background-color:rgb(145, 142, 142) ;
 }
-h1{
+header{
+    background-color: rgb(216, 214, 214);
+    border-bottom: 1px solid white;
+    position: fixed;
+    left: 0;
+    width: 100%;
+}
+.navigation{
+    display: flex;
+    float: top;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.navigation a{
+    color: aliceblue;
+    
+}
+.WODlogo{
+    
+    width: 30;
+    
+}
+.WODlogo a{
+    
+    font-size: 25px;
+    padding-left: 10px;
+    
+}
+.search_bar{
+    border-radius: 3px;
+    color: aliceblue;
+    cursor: text;
+    
+    
+}
+.search_bar a{
+    font-size: 25px;
+    padding-left: 15px;
+    
+}
+
+input{
+    width: 200px;
+    height: 25px;
+    margin-top: 27px;
+    box-shadow: 5px 5px gray;
+    border-radius: 5px;
+}
+.stats{
+    text-align: center;
+    height:30px ;
+    width:120px ;
+    margin-right: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 5px;
+    box-shadow: 5px 5px gray;
+    color: aliceblue;
+    
+}
+/*body*/
+.log{
     color: aqua;
+    text-align: center;
+    
+}
+.spreadsheet{
+    margin-top: 100px;
+    
+}
+.btn1 {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: aliceblue;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(0, 157, 255);
+    border-color: rgb(0, 157, 255);
+    box-shadow: 3px 3px gray;
+    text-align: center;
+}
+.btn2{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 630px;
+    color: aliceblue;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(0, 157, 255);
+    border-color: rgb(0, 157, 255);
+    box-shadow: 3px 3px gray;
     text-align: center;
 }

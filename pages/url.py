@@ -9,7 +9,10 @@ ProfilePageView,
 RunPageView, 
 HomePageView, 
 AboutPageView,
-LogsPageViews)
+LogsPageViews,
+FiveKPageViews,
+ProgramsPageViews
+)
 
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
@@ -27,4 +30,7 @@ urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
     path('about/', AboutPageView.as_view(), name='about'),
     path('log/', LogsPageViews.as_view(), name="logs"),
+    path('5k_run/', FiveKPageViews.as_view(), name="logs"),
+    path('programs/', ProgramsPageViews.as_view(), name="programs"),
 ]
+
