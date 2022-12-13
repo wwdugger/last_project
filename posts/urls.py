@@ -2,8 +2,6 @@ from django.conf.urls import include
 from django.urls import path
 from accounts import views
 
-
-from pages import url
 from .views import (
     PostListView,
     DraftPostListView,

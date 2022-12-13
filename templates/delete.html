@@ -1,0 +1,12 @@
+{% block title %}Delete Post{% endblock title %}
+
+{% block content %}
+<div class="post-detail">
+<h1>Delete Post</h1>
+<p>Are you sure you want to delete "{{ post.tilte }}"</p>
+<form method="POST">
+    {% csrf_token %}
+    <input tpye="submit" value="Confirm" class="btn btn-danger">
+</form>
+</div>
+{% endblock content %}
