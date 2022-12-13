@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
 {% block content %}
     <html>
     <script src="https://bossanova.uk/jspreadsheet/v4/jexcel.js"></script>
@@ -10,7 +13,8 @@
             <div class="navigation">
             <div class="WODlogo">
                 
-                <a href="/"><h3><i style="color: red;">W</i><i style="color: yellow;">O</i><i style="color:blue ;">D</i></h3></a>
+                <a href='/pages/home/'>
+                    <h3><i style="color: red;">W</i><i style="color: yellow;">O</i><i style="color:blue ;">D</i></h3></a>
             </div>
 
             <div class="search_bar">
@@ -96,12 +100,10 @@
         ]
     });
     </script>
-    
-    
-    <button type="button" class="btn1" onclick= "location.href='../profile/';">Share</button>
-    {% load comments %}
-    <button type="button" class="btn2" onclick= "location.href='../profile/';">Comment</button>
-    
-    {% endblock content %}
     </form>
-    </html>
+
+
+    
+        {% endblock content %}
+        
+        </html>

@@ -100,3 +100,9 @@ input{
     box-shadow: 3px 3px gray;
     text-align: center;
 }
+/*comments*/
+
+.card-text{
+    height: 300px;
+    width: 500px;
+}

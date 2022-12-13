@@ -1,5 +1,5 @@
     {% load static %}
-
+    {% load crispy_forms_tags %}
     <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -12,40 +12,63 @@
             crossorigin="anonymous"
             ></script>
             <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-            <link rel="stylesheet" href="{% static 'css/profile.css' %}" />
+            {% load static %}<link rel="stylesheet" href="{% static 'css/log.css' %}">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
                 crossorigin="anonymous" />
             <title>Document</title>
         </head>
         <body>
-            <div class="main">
-            <header>
-                <div class="navigation">
-                <div class="WODlogo">
-                    
-                    <a href="/"><h3><i style="color: red;">W</i><i style="color: yellow;">O</i><i style="color:blue ;">D</i></h3></a>
+            {% block content %}
+            {% endblock content %}
+            <div class="container">
+                <div class="row">
+                <div class="col-md-8 card mb-4  mt-3 left  top">
+                    <div class="card-body">
+                    <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
+                    <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
+                    <p class="card-text ">{{ post.content | safe }}</p>
+                    </div>
                 </div>
-
-                <div class="search_bar">
-                    <input type="text" placeholder="search" />
-                    <a class="search_bar" href=""><i class="fas fa-search"></i></a>
+            
+                <div class="col-md-8 card mb-4  mt-3 ">
+                    <div class="card-body">
+                    <!-- comments -->
+                    <h2>{{ comments.count }} comments</h2>
+            
+                    {% for comment in comments %}
+                    <div class="comments" style="padding: 10px;">
+                        <p class="font-weight-bold">
+                        {{ comment.name }}
+                        <span class=" text-muted font-weight-normal">
+                            {{ comment.created_on }}
+                        </span>
+                        </p>
+                        {{ comment.body | linebreaks }}
+                    </div>
+                    {% endfor %}
+                    </div>
                 </div>
-
-                <div class="contacts_icons">
-                    <button class="program" onclick="location.href='../sport/';">Programs</button>
-                    <button class="stats" onclick= "location.href='../log/';">Logs</button>
-                    
+                <div class="col-md-8 card mb-4  mt-3 ">
+                    <div class="card-body">
+                    {% if new_comment %}
+                    <div class="alert alert-success" role="alert">
+                        Your comment is awaiting moderation
+                    </div>
+                    {% else %}
+                    <h3>Leave a comment</h3>
+                    <form method="post" style="margin-top: 1.3em;">
+                        {{ comment_form.as_p }}
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+                    </form>
+                    {% endif %}
+                    </div>
                 </div>
                 </div>
-            </header>
-    {% block content %}
-    {% endblock content %}
-    <!-- Footer -->
-    <footer class="py-3 bg-grey">
-        <p class="m-0 text-dark text-center "></p>
-    </footer>
-    {% block sidebar %}
-
-    {% endblock sidebar %}
+            </div>
+            
+                
+                
+        
     </body>
     </html>

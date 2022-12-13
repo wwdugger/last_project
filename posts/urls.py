@@ -1,5 +1,9 @@
 from django.conf.urls import include
 from django.urls import path
+from accounts import views
+
+
+from pages import url
 from .views import (
     PostListView,
     DraftPostListView,
@@ -21,6 +25,6 @@ urlpatterns = [
     path('new/', PostCreateView.as_view(), name="new"),
     path('<int:edit>/edit/', PostUpdateView.as_view(), name='edit'),
     path('<int:pk>/delete/', PostDeleteView.as_view(), name='delete'),
-    path(r'^comments/', include('django.contrib.comments.urls')),
-    ]
-    
+    #FB#
+
+]

@@ -1,5 +1,8 @@
 from django.urls import path
-from .views import( LoginPageView, 
+from . import views
+from django.urls import path
+from .views import( 
+LoginPageView, 
 RegisterPageView, 
 PersonalInfoPageView, 
 LocationPageView,
@@ -11,7 +14,8 @@ HomePageView,
 AboutPageView,
 LogsPageViews,
 FiveKPageViews,
-ProgramsPageViews
+ProgramsPageViews,
+IndexPageViews,
 )
 
 from django.contrib import admin
@@ -27,10 +31,13 @@ urlpatterns = [
     path('run/', RunPageView.as_view(), name='run'),
     path('profile/', ProfilePageView.as_view(), name='profile'),
     path('password/', auth_views.PasswordChangeView.as_view(template_name='password_change.html')),
-    path('', HomePageView.as_view(), name='home'),
+    path('home/', HomePageView.as_view(), name='home'),
+    path('index/', IndexPageViews.as_view(), name='index'),
     path('about/', AboutPageView.as_view(), name='about'),
     path('log/', LogsPageViews.as_view(), name="logs"),
-    path('5k_run/', FiveKPageViews.as_view(), name="logs"),
+    path('5k_run/', FiveKPageViews.as_view(), name="5k_run"),
     path('programs/', ProgramsPageViews.as_view(), name="programs"),
+    #signup#
+    #path('register/', views.sign_up, name='register'),
 ]
 

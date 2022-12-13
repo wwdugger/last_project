@@ -5,6 +5,8 @@ from django.contrib.auth import get_user_model
 from django.urls import reverse
 from stream_django.activity import Activity
 
+
+
 #admin#
 class Status(models.Model):
     name = models.CharField(max_length=128)
@@ -20,7 +22,7 @@ class Post(models.Model):
         get_user_model(),
         on_delete=models.CASCADE
     )
-    body = models.TextField()
+    body = models.TextField(null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.ForeignKey(
         Status,
@@ -36,15 +38,6 @@ class Post(models.Model):
         return reverse('detail', args=[self.id])
 
 
-class Dreamreal(models.Model):
-
-    website = models.CharField(max_length = 50)
-    mail = models.CharField(max_length = 50)
-    name = models.CharField(max_length = 50)
-    phonenumber = models.IntegerField()
-
-class Meta:
-    db_table = "dreamreal"
 
 
 

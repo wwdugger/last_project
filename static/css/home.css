@@ -1,0 +1,142 @@
+header{
+    background-color: rgb(216, 214, 214);
+    border-bottom: 1px solid white;
+    position: fixed;
+    left: 0;
+    width: 100%;
+}
+.navigation{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.navigation a{
+    color: aliceblue;
+    
+}
+.WODlogo{
+    
+    width: 30;
+    
+}
+.WODlogo a{
+    
+    font-size: 25px;
+    padding-left: 10px;
+    
+}
+.search_bar{
+    border-radius: 3px;
+    color: aliceblue;
+    cursor: text;
+}
+
+.search_bar a{
+    font-size: 25px;
+    padding-left: 15px;
+    
+}
+.Notifacations{
+    margin-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px gray;
+    color: aliceblue;
+    background-color: rgb(217, 0, 217);
+    border-color: rgb(217, 0, 217);
+}
+.profile{
+    margin-right: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 5px;
+    box-shadow: 5px 5px gray;
+    color: aliceblue;
+    background-color:purple;
+    border-color: purple;
+}
+/*frend card*/
+.container{
+    background-color: rgb(216, 214, 214);;
+    padding-bottom: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    max-height: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+.btn2 {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+button:hover, a:hover {
+    opacity: 0.7;
+}
+
+/*footer*/
+.contacts_icons2{
+    background-color: rgb(216, 214, 214);
+    border-top: 1px solid white;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    margin-top: 35%;
+    padding:30px ;
+}
+.screenshare{
+    float: right;
+    border-radius: 5px;
+    box-shadow: 5px 5px gray;
+    color: aliceblue;
+    background-color:green;
+    border-color: green;
+}
+.watch{
+    margin-left: 35%;
+    border-radius: 5px;
+    box-shadow: 5px 5px gray;
+    color: aliceblue;
+    background-color:lightblue;
+    border-color: lightblue;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.Events{
+    float: left;
+    border-radius: 5px;
+    box-shadow: 5px 5px gray;
+    color: aliceblue;
+    background-color:blue;
+    border-color: blue;
+    padding-right: 30px;
+    padding-left: 30px;
+}

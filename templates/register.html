@@ -17,8 +17,23 @@
 </head>
 <body>
     
-    <form>
-        <h2>Register</h2>
+<form method="POST" novalidate>
+	{% csrf_token %}
+	<h2>Sign Up</h2>
+		
+	{% for field in form %}
+	<p>
+		{% if field.errors %}
+		<ul class="errorlist">
+			{% for error in field.errors %}
+			<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	    {{ field.label_tag }} {{ field }}
+	</p>
+	{% endfor %}
+
         <div class="mb-3">
             <p style="color:rgb(62, 0, 128) ;">Full Name</p>
             <input type="text" name="firstname" class="form-control-1" id="exampleInputName">

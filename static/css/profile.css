@@ -15,9 +15,9 @@ header{
     flex-direction: row;
     text-align: center;
     justify-content: space-between;
-    
     flex-wrap: wrap;
     align-items: center;
+    box-shadow: 5px 5px gray;
 }
 
 .navigation a{
@@ -35,11 +35,7 @@ header{
     padding-left: 10px;
     
 }
-.v1{
-    border-left: 2px solid black;
-    height: 30px;
-    margin-left: 20px;
-}
+
 .contacts_icons{
     
     column-gap: 30px;
@@ -95,14 +91,17 @@ h2,p{
 img{
     margin-left: 200px;
     margin:20px;
-    margin-top: 150px;
+    margin-top: 50px;
     height: 200px;
     width: 200px;
     border-radius: 30%;
 }
+.profile{
+    background-color: white;
+}
 .main{
     height: 700px;
-    width: 400px;
+    width: 200px;
     display: grid;
     grid-template-rows: 100px;
     grid-template-columns: 25px 25px 25px;
@@ -111,12 +110,13 @@ img{
 }
 .detail{
     display: grid;
-    grid-template-rows:150px;
+    grid-template-rows:0px;
     grid-template-columns:1fr 1fr 1fr ;
-    margin: 20px;
-    margin-top: 150px;
+    float: right;
+    margin-top: 75px;
+    margin-right: 100px;
     justify-content:flex-start;
-    column-gap: 50px;
+
 }
 h3{
     color: black;
@@ -125,7 +125,7 @@ h3{
 }
 .info{
     margin-right: 50px;
-    margin-top: 250px;
+    margin-bottom: 50px;
     width: 500px
     
 }
@@ -167,11 +167,8 @@ h3{
     font-weight: bold;
     margin: 0px 8px;
 }
-body {
-    font-family: "Roboto", sans-serif;
-    font-size: 17px;
-    background-color: #fdfdfd;
-}
+
+
 .shadow {
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
 }
