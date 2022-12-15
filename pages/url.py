@@ -16,6 +16,7 @@ LogsPageViews,
 FiveKPageViews,
 ProgramsPageViews,
 IndexPageViews,
+log_details_page
 )
 
 from django.contrib import admin
@@ -34,7 +35,8 @@ urlpatterns = [
     path('home/', HomePageView.as_view(), name='home'),
     path('index/', IndexPageViews.as_view(), name='index'),
     path('about/', AboutPageView.as_view(), name='about'),
-    path('log/', LogsPageViews.as_view(), name="logs"),
+    path('logOld/', LogsPageViews.as_view(), name="logs"),
+    path('log/', log_details_page, name="logs"),
     path('5k_run/', FiveKPageViews.as_view(), name="5k_run"),
     path('programs/', ProgramsPageViews.as_view(), name="programs"),
     #signup#

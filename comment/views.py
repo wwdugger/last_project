@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404
 
 
 def post_detail(request, slug):
-    template_name = 'pages/base.html'
+    template_name = 'log.html'
     post = get_object_or_404(Post, slug=slug)
     comments = post.comments.filter(active=False)
     new_comment = None

@@ -1,10 +1,10 @@
-from django.views.generic import TemplateView 
+from django.views.generic import TemplateView
+from comment.forms import CommentForm
+from django.shortcuts import render, get_object_or_404
+from comment.models import Comment
 
-#from .forms import LoginForm, RegisterForm
-#from django import forms
-#from django.shortcuts import render, redirect
-#from django.contrib import messages
-#from django.contrib.auth import login, authenticate, logout
+from posts.models import Post 
+
 
 
 class LoginPageView(TemplateView):
@@ -49,24 +49,25 @@ class ProgramsPageViews(TemplateView):
 class IndexPageViews(TemplateView):
     template_name = 'index.html'
 
-#signup#
-#class LoginForm(forms.Form):
-#    username = forms.CharField(max_length=65)
-#   password = forms.CharField(max_length=65, widget=forms.PasswordInput)
 
-##def sign_up(request):
-#    if request.method == 'GET':
-#        form = RegisterForm()
-#        return render(request, 'pages/register.html', { 'form': form})
 
-#    if request.method == 'POST':
-#        form = RegisterForm(request.POST) 
-#        if form.is_valid():
-#            user = form.save(commit=False)
-#           user.username = user.username.lower()
-#          user.save()
-#         messages.success(request, 'You have singed up successfully.')
-#        login(request, user)
-#       return redirect('posts')
-#  else:
-#     return render(request, 'pages/register.html', {'form': form})
+def  log_details_page(request):
+    template_name = 'log.html'
+    comments = Comment.objects.all()
+    new_comment = None
+    # Comment posted
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+
+            # Create Comment object but don't save to database yet
+            new_comment = comment_form.save(commit=False)
+            # Save the comment to the database
+            new_comment.save()
+    else:
+        comment_form = CommentForm()
+
+    return render(request, template_name, {'test': 1234,
+                                        'comments': comments,
+                                        'new_comment': new_comment,
+                                        'comment_form': comment_form})
